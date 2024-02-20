@@ -63,6 +63,9 @@ x-airflow-common: &airflow-common
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
     - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/dags:/opt/airflow/txts_gtfs
+    - ./airflow/dags:/opt/airflow/zip_gtfs
+    - ./airflow/dags:/opt/airflow/sql
     - ./airflow/data:/opt/airflow/data
     - ./airflow/offline_data:/opt/airflow/offline_data
     - ./airflow/keywords:/opt/airflow/keywords
